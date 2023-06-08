@@ -300,5 +300,3 @@ Optional:
 - `clear_value` (Number)
 - `set_percent` (Number)
 - `set_value` (Number)
-
-

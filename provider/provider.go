@@ -35,6 +35,9 @@ type providerData struct {
 func (p *solaceProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
 	var data providerData
 
+	// Add deprecation warning
+	resp.Diagnostics.AddWarning("The TelusAg/solace provider is deprecated, please migrate to telus-agcg/solace.", "")
+
 	// Set default values where possible
 	data.Scheme = ToPtr("https")
 	data.Insecure = ToPtr(false)
